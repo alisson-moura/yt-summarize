@@ -70,6 +70,13 @@ export type StrapiFooter = {
     logo: StrapiImage
 }
 
+export type StrapiMetaData = {
+    id: 3
+    documentId: string
+    title: string
+    description: string
+}
+
 
 export type StrapiResponse<T = null> = {
     success: boolean;
