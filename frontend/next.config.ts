@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
         hostname: '127.0.0.1', // Aceita se vier 127.0.0.1
         port: '1337',
         pathname: '/uploads/**/*'
+      },
+      {
+        protocol: 'http',
+        hostname: '172.20.201.61', // Aceita se vier 127.0.0.1
+        port: '1337',
+        pathname: '/uploads/**/*'
       }
     ]
   }

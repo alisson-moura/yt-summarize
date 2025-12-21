@@ -39,11 +39,13 @@ export async function apiRequest<T = unknown, P = Record<string, unknown>>(url: 
         headers["Authorization"] = `Bearer ${authToken}`;
     }
 
+    console.log("## API Request Payload ##")
+    console.log(payload)
     try {
         const response = await apiWithTimeout(url, {
             method,
             headers,
-            body: method === "GET" || "DELETE"
+            body: method === "GET" || method === "DELETE"
                 ? undefined
                 : JSON.stringify(payload ?? {})
         }, timeoutMs)
@@ -99,8 +101,6 @@ export async function apiRequest<T = unknown, P = Record<string, unknown>>(url: 
                 status: response.status,
             };
         }
-
-
 
         // Success case - extract Strapi data field to avoid double nesting
         const responseData = data.data ? data.data : data;

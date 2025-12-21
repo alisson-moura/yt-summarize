@@ -22,7 +22,7 @@ export function Footer({ data }: { readonly data: StrapiFooter }) {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
 
                     {/* Esquerda: Logo */}
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                         <Logo logo={logo} text={logoText} dark={true} />
                     </div>
 
